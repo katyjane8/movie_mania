@@ -5,7 +5,7 @@ require 'rails_helper'
       @director_1 = Director.create!(name: "Edgar Wright")
       @movie_1 = Movie.create(title: "Drop Dead Gorgeous", description: "a dark comedy about beauty pagents")
       @movie_2 = Movie.create(title: "Charlie Brown Christmas", description: "a holiday movie classic")
-      @movie_3 = Movie.create!(title: "Shaun of the Dead", description: "GOAT", director_id: "#{@director_1.director_id}")
+      @movie_3 = Movie.create!(title: "Shaun of the Dead", description: "GOAT", director_id: "#{@director_1.id}")
       visit '/movies'
     end
 
