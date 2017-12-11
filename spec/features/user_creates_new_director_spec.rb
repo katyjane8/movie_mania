@@ -7,6 +7,7 @@ describe "As a user, when I visit '/directors/new'" do
 
       expect(page.status_code).to eq(200)
       expect(page).to have_content("Create a New Director")
+      expect(page).to have_content("Name")
 
       fill_in "director[name]", with: "Steven Spielberg"
 
