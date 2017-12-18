@@ -6,7 +6,8 @@ require 'rails_helper'
       @movie_1 = Movie.create(title: "Drop Dead Gorgeous", description: "a dark comedy about beauty pagents")
       @movie_2 = Movie.create(title: "Charlie Brown Christmas", description: "a holiday movie classic")
       @movie_3 = Movie.create!(title: "Shaun of the Dead", description: "GOAT", director_id: "#{@director_1.id}")
-      visit '/movies'
+      # visit '/directors/:director_id/movies'
+      visit movies_path(@director_1)
     end
 
     it "I see the page movie mania title" do

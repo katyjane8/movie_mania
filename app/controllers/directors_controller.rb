@@ -1,12 +1,12 @@
 class DirectorsController < ApplicationController
-  before_action :set_director, only: [:show]
+  before_action :set_director, only: [:show, :edit, :destroy, :update]
 
   def index
-    @directors = Director.all
+    @director = Director.all
   end
 
   def new
-    @directors = Director.new
+    @director = Director.new
   end
 
   def create
@@ -19,7 +19,8 @@ class DirectorsController < ApplicationController
   end
 
   def show
-    redirect_to director_path()
+    @director = Director.find(params[:id])
+    session[:secret] = "This time for real, though."
   end
 
   private
