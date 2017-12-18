@@ -3,9 +3,12 @@ require 'rails_helper'
 describe "As a user, when I visit '/movies/new'" do
   context "they fill out a form to create a new movie" do
     it "creates a new movie" do
-      director = Director.create(name: "Ali")
-
+      # director = Director.create(name: "Ali")
+      # director = create(:director)
       # visit "/directors/#{director.id}/movies/new"
+      movie_1, movie_2 = create_list(:movie, 2, director_id: director.id)
+      binding.pry
+
       visit new_director_movie_path(director)
 
       fill_in "movie[title]", with: "Finding Nemo"

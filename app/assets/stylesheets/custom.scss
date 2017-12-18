@@ -1,0 +1,25 @@
+$grey: #A3A9AA;
+$minty: #17B890;
+$forest-green: #082D0F;
+$light-grey: #DEE5E5;
+$wow-green: #69995D;
+
+h1 {
+  color: $forest-green;
+}
+h2 {
+  color: $wow-green;
+  border-style: dotted;
+  border-width: 3px;
+  text: {
+    align: center;
+    decoration: underline;
+  }
+}
+p {
+  border: $wow-green;
+  font: {
+  family: "Papyrus";
+  size: 15px;
+  }
+}
