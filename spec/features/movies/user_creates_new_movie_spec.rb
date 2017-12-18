@@ -6,8 +6,9 @@ describe "As a user, when I visit '/movies/new'" do
       # director = Director.create(name: "Ali")
       # director = create(:director)
       # visit "/directors/#{director.id}/movies/new"
+      director = create(:director)
       movie_1, movie_2 = create_list(:movie, 2, director_id: director.id)
-      binding.pry
+      # binding.pry
 
       visit new_director_movie_path(director)
 
