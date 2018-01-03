@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "welcome#index"
 
+  resources :carts, only: [:create]
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
 
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :new, :create]
 
-  namespace :admin do 
+  namespace :admin do
     resources :categories, only: [:index]
   end
 end
